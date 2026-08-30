@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: var(--font-space-grotesk);
+}
+
+:root {
+  /* Default: Dark Theme */
+  --bg-color: #050505;
+  --text-main: #ffffff;
+  --text-muted: #94a3b8;
+  --card-bg: rgba(255, 255, 255, 0.03);
+  --card-border: rgba(255, 255, 255, 0.08);
+  --card-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+  --nav-bg: rgba(0, 0, 0, 0.45);
+  --nav-border: rgba(255, 255, 255, 0.15);
+  --input-border: #4b5563;
+  --svg-stop-1: #e5e7eb;
+  --svg-stop-2: #4b5563;
+  --svg-stop-3: #0a0a0a;
+  --ribbon-opacity: 1;
+  --btn-invert-bg: #ffffff;
+  --btn-invert-text: #000000;
+  --btn-invert-hover: #e5e7eb;
+  --project-preview-bg: #000000;
+}
+
+html.light,
+[data-theme="light"] {
+  /* Light Theme Overrides */
+  --bg-color: #ffffff;
+  --text-main: #09090b;
+  --text-muted: #64748b;
+  --card-bg: rgba(255, 255, 255, 0.85);
+  --card-border: rgba(0, 0, 0, 0.08);
+  --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  --nav-bg: rgba(255, 255, 255, 0.85);
+  --nav-border: rgba(0, 0, 0, 0.1);
+  --input-border: #cbd5e1;
+  --svg-stop-1: #09090b;
+  --svg-stop-2: #64748b;
+  --svg-stop-3: #ffffff;
+  --ribbon-opacity: 0.45;
+  --btn-invert-bg: #09090b;
+  --btn-invert-text: #ffffff;
+  --btn-invert-hover: #27272a;
+  --project-preview-bg: #f1f5f9;
+}
+
+html, body, main {
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Glassmorphism Cards */
+.glass-card {
+  background: var(--card-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--card-border);
+  box-shadow: var(--card-shadow);
+  transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
