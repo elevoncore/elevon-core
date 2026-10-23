@@ -9,15 +9,27 @@ import Footer from '@/components/Footer';
 
 export default function Home() {
   return (
-    <main className="relative min-h-screen overflow-hidden flex flex-col items-center">
-      <BackgroundRibbons />
+    <>
+      {/* Accessible Skip Link */}
+      <a 
+        href="#home" 
+        className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2.5 focus:bg-zinc-950 focus:text-white focus:rounded-full focus:shadow-2xl focus:ring-2 focus:ring-indigo-400 text-sm font-semibold"
+      >
+        Skip to main content
+      </a>
+
       <Navbar />
-      <Hero />
-      <Team />
-      <Company />
-      <Projects />
-      <Contact />
+
+      <main className="relative min-h-screen overflow-x-clip flex flex-col items-center w-full">
+        <BackgroundRibbons />
+        <Hero />
+        <Team />
+        <Company />
+        <Projects />
+        <Contact />
+      </main>
+
       <Footer />
-    </main>
+    </>
   );
 }
