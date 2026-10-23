@@ -1,123 +1,126 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
   title: 'Terms & Conditions | Elevon Core',
-  description: 'Terms and Conditions governing engineering services and platform usage at Elevon Core.',
+  description: 'Terms and Conditions governing engineering services, intellectual property transfer, and delivery terms at Elevon Core.',
 };
 
 export default function TermsPage() {
   return (
-    <div className="min-h-screen bg-white text-zinc-950 flex flex-col">
-      {/* Header */}
-      <header className="border-b border-zinc-200/80 bg-white/80 backdrop-blur-md sticky top-0 z-50">
-        <div className="max-w-5xl mx-auto px-6 h-20 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-3 group">
-            <svg 
-              className="w-7 h-7 transition-transform group-hover:scale-105" 
-              viewBox="0 0 32 32" 
-              fill="none" 
-              xmlns="http://www.w3.org/2000/svg" 
-              aria-hidden="true"
-            >
-              <path d="M16 3L28 9.5V22.5L16 29L4 22.5V9.5L16 3Z" fill="url(#termsLogoBg)" stroke="rgba(0,0,0,0.15)" strokeWidth="1.5" />
-              <path d="M12 11H21M12 16H18.5M12 21H21" stroke="#ffffff" strokeWidth="2.2" strokeLinecap="round" />
-              <defs>
-                <linearGradient id="termsLogoBg" x1="4" y1="3" x2="28" y2="29" gradientUnits="userSpaceOnUse">
-                  <stop stopColor="#4f46e5" />
-                  <stop offset="1" stopColor="#9333ea" />
-                </linearGradient>
-              </defs>
-            </svg>
-            <span className="font-display font-bold text-lg text-zinc-950">Elevon Core</span>
-          </Link>
+    <div className="min-h-screen bg-white text-zinc-950 flex flex-col selection:bg-indigo-600 selection:text-white">
+      <Navbar />
 
+      {/* Main Plain Document Content */}
+      <main className="flex-grow w-full max-w-4xl mx-auto px-6 sm:px-8 pt-32 sm:pt-40 pb-20">
+        
+        {/* Breadcrumb & Header */}
+        <div className="mb-10 pb-8 border-b border-zinc-200">
           <Link 
             href="/"
-            className="text-sm font-semibold text-zinc-600 hover:text-zinc-950 px-4 py-2 rounded-full border border-zinc-200 hover:border-zinc-300 transition-colors"
+            className="inline-flex items-center gap-1.5 text-xs font-semibold text-zinc-500 hover:text-zinc-950 transition-colors mb-6 group"
           >
-            ← Back to Home
+            <span className="transition-transform group-hover:-translate-x-0.5">←</span>
+            <span>Back to Home</span>
           </Link>
-        </div>
-      </header>
 
-      {/* Main Legal Content */}
-      <main className="flex-grow max-w-4xl mx-auto px-6 py-16 sm:py-20">
-        <div className="mb-12 border-b border-zinc-200 pb-8">
-          <span className="text-xs font-bold text-indigo-600 tracking-widest uppercase mb-2 block font-display">
-            Governance &amp; Engagement
-          </span>
           <h1 className="font-display text-4xl sm:text-5xl font-bold tracking-tight text-zinc-950">
             Terms &amp; Conditions
           </h1>
-          <p className="mt-4 text-sm text-zinc-500">
-            Effective Date: October 23, 2026 • Last Updated: October 2026
+
+          <p className="mt-3 text-base text-zinc-600">
+            Predictable engineering milestones, client intellectual property transfer, and transparent delivery terms.
           </p>
+
+          <div className="mt-4 flex items-center gap-3 text-xs text-zinc-500 font-mono">
+            <span>Last Updated: October 2026</span>
+            <span>•</span>
+            <span>Elevon Core Software Engineering</span>
+          </div>
         </div>
 
-        <div className="space-y-10 text-zinc-700 leading-relaxed text-base">
+        {/* Article Body */}
+        <div className="prose prose-zinc max-w-none text-zinc-600 leading-relaxed text-base space-y-10">
+          
           <section>
-            <h2 className="font-display text-2xl font-bold text-zinc-950 mb-3">1. Agreement to Terms</h2>
+            <h2 className="font-display text-xl sm:text-2xl font-bold text-zinc-950 mb-3 tracking-tight">
+              1. Engineering Engagement &amp; SOWs
+            </h2>
             <p>
-              By accessing the <strong>Elevon Core</strong> website or engaging our software engineering, AI workflow orchestration, or digital architecture services, you agree to be bound by these Terms &amp; Conditions and any accompanying Statements of Work (SOW) or Master Services Agreements (MSA).
+              Elevon Core operates as an engineering partner shipping high-performance web applications, enterprise ERP engines, and custom automation workflows. Every commercial engagement is defined by an agreed Statement of Work (SOW) specifying deliverables, sprint cadence, milestones, and technical requirements.
             </p>
           </section>
 
           <section>
-            <h2 className="font-display text-2xl font-bold text-zinc-950 mb-3">2. Scope of Services</h2>
-            <p>
-              Elevon Core engineers bespoke web applications, enterprise ERP systems, machine learning integrations, and autonomous automation pipelines. Specific deliverables, project milestones, acceptance criteria, and warranties are governed by individual client contracts executed prior to project kickoff.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="font-display text-2xl font-bold text-zinc-950 mb-3">3. Intellectual Property Rights</h2>
+            <h2 className="font-display text-xl sm:text-2xl font-bold text-zinc-950 mb-3 tracking-tight">
+              2. Intellectual Property &amp; Code Ownership
+            </h2>
             <p className="mb-3">
-              We respect clear boundaries regarding intellectual property:
+              We stand for unequivocal client ownership of business deliverables:
             </p>
-            <ul className="list-disc list-inside space-y-2 ml-2">
-              <li><strong>Client Deliverables:</strong> Upon receipt of full payment for agreed milestones, all custom software deliverables, business logic, and bespoke codebases transfer to the client as work-for-hire.</li>
-              <li><strong>Pre-Existing Tools &amp; Libraries:</strong> Elevon Core retains ownership of pre-existing internal frameworks, open-source utilities, and generic development scaffolding incorporated into the project, granting the client a perpetual, non-exclusive license for their use.</li>
-            </ul>
+            <div className="space-y-3">
+              <div className="p-4 rounded-xl bg-zinc-50 border border-zinc-200">
+                <h3 className="font-display font-semibold text-zinc-900 text-sm mb-1">Custom Deliverables</h3>
+                <p className="text-sm text-zinc-600">
+                  Upon fulfillment of milestone payments, all bespoke software, database schemas, and custom codebases engineered specifically for your platform transfer 100% to your organization as work-for-hire.
+                </p>
+              </div>
+
+              <div className="p-4 rounded-xl bg-zinc-50 border border-zinc-200">
+                <h3 className="font-display font-semibold text-zinc-900 text-sm mb-1">Core Scaffolding</h3>
+                <p className="text-sm text-zinc-600">
+                  General open-source frameworks, packages, and internal utility boilerplates incorporated into projects are licensed perpetually and royalty-free to the client.
+                </p>
+              </div>
+            </div>
           </section>
 
           <section>
-            <h2 className="font-display text-2xl font-bold text-zinc-950 mb-3">4. Client Responsibilities</h2>
+            <h2 className="font-display text-xl sm:text-2xl font-bold text-zinc-950 mb-3 tracking-tight">
+              3. Milestone Verification &amp; Quality
+            </h2>
             <p>
-              Clients are responsible for providing timely access to necessary third-party APIs, credentials, operational domain knowledge, and prompt milestone review. Delays in providing required inputs may adjust agreed development timelines.
+              Deliverables are shipped iteratively. Each milestone concludes with automated test validation, code reviews, and staging previews for client review. Upon written acceptance, deployment to production proceeds according to the deployment schedule.
             </p>
           </section>
 
           <section>
-            <h2 className="font-display text-2xl font-bold text-zinc-950 mb-3">5. Warranties &amp; Code Quality</h2>
+            <h2 className="font-display text-xl sm:text-2xl font-bold text-zinc-950 mb-3 tracking-tight">
+              4. Code Warranties &amp; Defect Resolution
+            </h2>
             <p>
-              We deliver code written to modern production standards, verified with automated testing, continuous integration, and type safety. We provide a post-launch warranty period (as defined in your project SOW) to address and resolve any defects originating from delivered specifications.
+              Elevon Core warrants that all deliverables will conform substantially to the technical specifications defined in the relevant SOW. We provide a post-launch warranty window (stipulated in your project agreement) during which our team will promptly diagnose and resolve any defects arising from delivered code without additional billing.
             </p>
           </section>
 
           <section>
-            <h2 className="font-display text-2xl font-bold text-zinc-950 mb-3">6. Limitation of Liability</h2>
+            <h2 className="font-display text-xl sm:text-2xl font-bold text-zinc-950 mb-3 tracking-tight">
+              5. Limitation of Liability
+            </h2>
             <p>
-              To the maximum extent permitted by applicable law, Elevon Core shall not be liable for indirect, incidental, or consequential damages resulting from platform downtime, third-party API outages, or unauthorized third-party access beyond our reasonable operational control.
+              To the maximum extent permitted under applicable law, Elevon Core shall not be liable for indirect, incidental, or consequential damages resulting from third-party vendor outages, external API deprecations, or security incidents stemming from compromised client credentials.
             </p>
           </section>
 
-          <section className="border-t border-zinc-200 pt-8">
-            <h2 className="font-display text-2xl font-bold text-zinc-950 mb-3">7. Contact &amp; Legal Notices</h2>
+          <section className="pt-6 border-t border-zinc-200">
+            <h2 className="font-display text-xl sm:text-2xl font-bold text-zinc-950 mb-3 tracking-tight">
+              6. Master Agreements &amp; Legal Notices
+            </h2>
             <p>
-              For legal inquiries, contract execution, or partnership terms, contact:
+              For bilateral Master Services Agreements (MSAs), custom NDAs, or enterprise retainer scopes, contact our lead engineers:
             </p>
             <p className="mt-3 font-semibold text-zinc-950">
-              Email: <a href="mailto:elevoncore@gmail.com" className="text-indigo-600 hover:underline">elevoncore@gmail.com</a>
+              Email: <a href="mailto:elevoncore@gmail.com" className="text-indigo-600 hover:text-indigo-700 underline underline-offset-4">elevoncore@gmail.com</a>
             </p>
           </section>
+
         </div>
       </main>
 
-      {/* Clean Footer */}
-      <footer className="border-t border-zinc-200 bg-zinc-50 py-8 px-6 text-center text-xs text-zinc-500">
-        <p>© {new Date().getFullYear()} Elevon Core. All Rights Reserved. Digital Precision. Automated Scale.</p>
-      </footer>
+      {/* Signature Site Footer */}
+      <Footer />
     </div>
   );
 }
