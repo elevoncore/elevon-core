@@ -2,12 +2,14 @@ export default function BackgroundRibbons() {
   return (
     <>
       {/* --- 1. FIRST PAGE GLOWY RIBBON --- */}
-      <div style={{ opacity: 'var(--ribbon-opacity)' }} className="absolute top-0 left-0 w-full h-[900px] overflow-hidden -z-10 flex justify-center pointer-events-none transition-opacity duration-300">
-        
+      <div 
+        style={{ opacity: 'var(--ribbon-opacity, 0.35)' }} 
+        className="absolute top-0 left-0 w-full h-[900px] overflow-hidden -z-10 flex justify-center pointer-events-none transition-opacity duration-300"
+      >
         {/* DESKTOP CURVE */}
         <svg
           aria-hidden="true"
-          className="hidden md:block absolute min-w-[1200px] w-full h-full opacity-100 animate-[pulse_6s_ease-in-out_infinite]"
+          className="hidden md:block absolute min-w-[1200px] w-full h-full opacity-100 animate-[pulse_6s_ease-in-out_infinite] motion-reduce:animate-none"
           viewBox="0 0 1200 900"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -30,10 +32,10 @@ export default function BackgroundRibbons() {
           </defs>
         </svg>
 
-        {/* MOBILE CURVE (Restored with perfect curve) */}
+        {/* MOBILE CURVE */}
         <svg
           aria-hidden="true"
-          className="block md:hidden absolute w-full min-w-[400px] h-full opacity-100 animate-[pulse_6s_ease-in-out_infinite] left-1/2 -translate-x-1/2"
+          className="block md:hidden absolute w-full min-w-[400px] h-full opacity-100 animate-[pulse_6s_ease-in-out_infinite] motion-reduce:animate-none left-1/2 -translate-x-1/2"
           viewBox="0 0 400 900"
           preserveAspectRatio="xMidYMin slice"
           fill="none"
@@ -54,16 +56,17 @@ export default function BackgroundRibbons() {
             </linearGradient>
           </defs>
         </svg>
-
       </div>
 
       {/* --- 2. LAST PAGE GLOWY RIBBON --- */}
-      <div style={{ opacity: 'var(--ribbon-opacity)' }} className="absolute bottom-0 left-0 w-full h-[900px] overflow-hidden -z-10 flex justify-center pointer-events-none transition-opacity duration-300">
-        
+      <div 
+        style={{ opacity: 'var(--ribbon-opacity, 0.35)' }} 
+        className="absolute bottom-0 left-0 w-full h-[900px] overflow-hidden -z-10 flex justify-center pointer-events-none transition-opacity duration-300"
+      >
         {/* DESKTOP CURVE */}
         <svg
           aria-hidden="true"
-          className="hidden md:block absolute min-w-[1200px] w-full h-full opacity-100 animate-[pulse_6s_ease-in-out_infinite]"
+          className="hidden md:block absolute min-w-[1200px] w-full h-full opacity-100 animate-[pulse_6s_ease-in-out_infinite] motion-reduce:animate-none"
           viewBox="0 0 1200 900"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -84,16 +87,15 @@ export default function BackgroundRibbons() {
           </defs>
         </svg>
 
-        {/* MOBILE CURVE (Shifted down to pass behind typography) */}
+        {/* MOBILE CURVE */}
         <svg
           aria-hidden="true"
-          className="block md:hidden absolute w-full min-w-[400px] h-full opacity-100 animate-[pulse_6s_ease-in-out_infinite] left-1/2 -translate-x-1/2"
+          className="block md:hidden absolute w-full min-w-[400px] h-full opacity-100 animate-[pulse_6s_ease-in-out_infinite] motion-reduce:animate-none left-1/2 -translate-x-1/2"
           viewBox="0 0 400 900"
           preserveAspectRatio="xMidYMax slice"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          {/* Shifted Y coordinates by +200 to push it lower over the big text */}
           <path d="M 500 750 C 250 550, 150 1000, -50 950" stroke="url(#paint0_bottom_mobile)" strokeWidth="36" strokeLinecap="round" filter="blur(16px)" />
           <path d="M 500 750 C 250 550, 150 1000, -50 950" stroke="url(#paint1_bottom_mobile)" strokeWidth="12" strokeLinecap="round" filter="blur(3px)" />
           <defs>
@@ -109,7 +111,6 @@ export default function BackgroundRibbons() {
             </linearGradient>
           </defs>
         </svg>
-
       </div>
     </>
   );
