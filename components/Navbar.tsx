@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect, useRef } from 'react';
+import { useRouter, usePathname } from 'next/navigation';
 
 const NAV_ITEMS = [
   { label: 'Home', id: 'home' },
@@ -10,10 +11,15 @@ const NAV_ITEMS = [
 ];
 
 export default function Navbar() {
+  const router = useRouter();
+  const pathname = usePathname();
+  const isHomePage = pathname === '/';
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
   const navRef = useRef<HTMLElement>(null);
+
+  const isScrolledState = isScrolled || !isHomePage;
 
   // Handle Scroll state for dynamic Navbar pill
   useEffect(() => {
@@ -77,20 +83,22 @@ export default function Navbar() {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } else {
+      router.push(`/#${id}`);
     }
   };
 
   return (
     <header 
       className={`fixed inset-x-0 top-0 z-50 flex flex-col items-center pointer-events-none transition-all duration-500 ${
-        isScrolled ? 'pt-4 sm:pt-5 px-4' : 'pt-6 px-6 md:px-12 lg:px-24'
+        isScrolledState ? 'pt-4 sm:pt-5 px-4' : 'pt-6 px-6 md:px-12 lg:px-24'
       }`}
     >
       <nav 
         ref={navRef}
         aria-label="Main Navigation"
         className={`w-full pointer-events-auto flex justify-between items-center transition-all duration-500 ${
-          isScrolled 
+          isScrolledState 
             ? 'max-w-4xl py-2 px-4 sm:px-6 rounded-full bg-neutral-950/85 backdrop-blur-xl border border-white/15 shadow-[0_8px_32px_0_rgba(0,0,0,0.25)] text-white' 
             : 'max-w-[1400px] py-2 bg-transparent border-transparent shadow-none rounded-none text-white'
         }`}
