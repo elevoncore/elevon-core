@@ -47,16 +47,14 @@ export default function Footer() {
             {/* Columns 2, 3, 4 (7 cols): Link Columns with balanced spacing */}
             <div className="md:col-span-7 grid grid-cols-2 sm:grid-cols-3 gap-8 sm:gap-10">
               
-              {/* 1. Capabilities & Core Expertise */}
+              {/* 1. Capabilities & Core Engineering */}
               <div className="flex flex-col gap-3.5">
                 <span className="text-xs uppercase tracking-wider text-neutral-300 font-bold mb-1 font-display">
                   Capabilities
                 </span>
-                <span className="text-sm text-neutral-400">Autonomous AI</span>
-                <span className="text-sm text-neutral-400">Web Engineering</span>
-                <span className="text-sm text-neutral-400">Enterprise ERP</span>
+                <span className="text-sm text-neutral-400">AI Engineering</span>
+                <span className="text-sm text-neutral-400">Full Stack Systems</span>
                 <span className="text-sm text-neutral-400">Workflow Automation</span>
-                <span className="text-sm text-neutral-400">Cloud Architecture</span>
               </div>
 
               {/* 2. Connect */}
