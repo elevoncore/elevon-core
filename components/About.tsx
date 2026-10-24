@@ -1,11 +1,11 @@
-export default function Company() {
+export default function About() {
   return (
-    <section id="company" className="scroll-mt-24 w-full max-w-6xl z-10 px-4 py-20 flex flex-col items-center">
+    <section id="about" className="scroll-mt-24 w-full max-w-6xl z-10 px-4 py-20 flex flex-col items-center">
       <h2 className="font-display text-3xl md:text-5xl font-bold mb-4 tracking-tight text-center text-zinc-950">
-        Elevon Core
+        About Us
       </h2>
       <p className="text-zinc-500 text-base md:text-xl font-medium mb-12 text-center max-w-xl">
-        Mission &amp; Vision
+        A dedicated software engineering team building next-generation digital products and autonomous systems.
       </p>
       
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
@@ -18,7 +18,7 @@ export default function Company() {
             Core Philosophy
           </h3>
           <p className="text-zinc-600 text-sm md:text-base leading-relaxed flex-grow">
-            We are a dedicated engineering team driven by a commitment to ship ambitious, well-crafted software. We bridge the gap between stunning visual interfaces and robust operational backend systems, building cohesive solutions that help businesses scale faster and operate with absolute precision.
+            We are a dedicated software engineering team driven by a commitment to ship ambitious, well-crafted software. We bridge the gap between stunning visual interfaces and robust operational backend systems, building cohesive solutions that help businesses scale faster and operate with absolute precision.
           </p>
         </div>
 

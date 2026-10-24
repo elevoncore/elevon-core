@@ -1,8 +1,8 @@
 import BackgroundRibbons from '@/components/BackgroundRibbons';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
+import About from '@/components/About';
 import Team from '@/components/Team';
-import Company from '@/components/Company';
 import Projects from '@/components/Projects';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
@@ -23,8 +23,8 @@ export default function Home() {
       <main className="relative min-h-screen overflow-x-clip flex flex-col items-center w-full">
         <BackgroundRibbons />
         <Hero />
+        <About />
         <Team />
-        <Company />
         <Projects />
         <Contact />
       </main>

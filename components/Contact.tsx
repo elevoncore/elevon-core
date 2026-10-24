@@ -69,9 +69,6 @@ export default function Contact() {
           {/* Left Column: Text & Direct Contact Info */}
           <div className="flex flex-col justify-between">
             <div>
-              <span className="text-xs font-bold text-indigo-600 uppercase tracking-widest block mb-2">
-                Inquiries &amp; Partnerships
-              </span>
               <h2 className="font-display text-3xl md:text-5xl font-bold text-zinc-950 mb-4 tracking-tight">
                 Let&apos;s work together
               </h2>
@@ -111,7 +108,7 @@ export default function Contact() {
                   onChange={handleChange}
                   required
                   placeholder="John Doe"
-                  className="w-full bg-zinc-50 border border-zinc-300 rounded-xl px-3.5 py-2.5 text-zinc-900 placeholder:text-zinc-400 focus:bg-white focus:border-indigo-600 focus:ring-2 focus:ring-indigo-100 outline-none transition text-sm" 
+                  className="w-full bg-zinc-50 border border-zinc-300 rounded-xl px-3.5 py-2.5 text-zinc-900 placeholder:text-zinc-400 focus:bg-white focus:border-black focus:ring-1 focus:ring-black outline-none transition text-sm" 
                 />
               </div>
 
@@ -127,7 +124,7 @@ export default function Contact() {
                   onChange={handleChange}
                   required
                   placeholder="john@company.com"
-                  className="w-full bg-zinc-50 border border-zinc-300 rounded-xl px-3.5 py-2.5 text-zinc-900 placeholder:text-zinc-400 focus:bg-white focus:border-indigo-600 focus:ring-2 focus:ring-indigo-100 outline-none transition text-sm" 
+                  className="w-full bg-zinc-50 border border-zinc-300 rounded-xl px-3.5 py-2.5 text-zinc-900 placeholder:text-zinc-400 focus:bg-white focus:border-black focus:ring-1 focus:ring-black outline-none transition text-sm" 
                 />
               </div>
             </div>
@@ -144,7 +141,7 @@ export default function Contact() {
                   value={formData.company}
                   onChange={handleChange}
                   placeholder="Acme Corp"
-                  className="w-full bg-zinc-50 border border-zinc-300 rounded-xl px-3.5 py-2.5 text-zinc-900 placeholder:text-zinc-400 focus:bg-white focus:border-indigo-600 focus:ring-2 focus:ring-indigo-100 outline-none transition text-sm" 
+                  className="w-full bg-zinc-50 border border-zinc-300 rounded-xl px-3.5 py-2.5 text-zinc-900 placeholder:text-zinc-400 focus:bg-white focus:border-black focus:ring-1 focus:ring-black outline-none transition text-sm" 
                 />
               </div>
 
@@ -159,7 +156,7 @@ export default function Contact() {
                   value={formData.phone}
                   onChange={handleChange}
                   placeholder="+1 (555) 000-0000"
-                  className="w-full bg-zinc-50 border border-zinc-300 rounded-xl px-3.5 py-2.5 text-zinc-900 placeholder:text-zinc-400 focus:bg-white focus:border-indigo-600 focus:ring-2 focus:ring-indigo-100 outline-none transition text-sm" 
+                  className="w-full bg-zinc-50 border border-zinc-300 rounded-xl px-3.5 py-2.5 text-zinc-900 placeholder:text-zinc-400 focus:bg-white focus:border-black focus:ring-1 focus:ring-black outline-none transition text-sm" 
                 />
               </div>
             </div>
@@ -176,7 +173,7 @@ export default function Contact() {
                 onChange={handleChange}
                 required
                 placeholder="New project inquiry / AI automation"
-                className="w-full bg-zinc-50 border border-zinc-300 rounded-xl px-3.5 py-2.5 text-zinc-900 placeholder:text-zinc-400 focus:bg-white focus:border-indigo-600 focus:ring-2 focus:ring-indigo-100 outline-none transition text-sm" 
+                className="w-full bg-zinc-50 border border-zinc-300 rounded-xl px-3.5 py-2.5 text-zinc-900 placeholder:text-zinc-400 focus:bg-white focus:border-black focus:ring-1 focus:ring-black outline-none transition text-sm" 
               />
             </div>
 
@@ -192,7 +189,7 @@ export default function Contact() {
                 onChange={handleChange}
                 required
                 placeholder="Tell us about your project requirements..."
-                className="w-full bg-zinc-50 border border-zinc-300 rounded-xl px-3.5 py-2.5 text-zinc-900 placeholder:text-zinc-400 focus:bg-white focus:border-indigo-600 focus:ring-2 focus:ring-indigo-100 outline-none transition text-sm resize-none" 
+                className="w-full bg-zinc-50 border border-zinc-300 rounded-xl px-3.5 py-2.5 text-zinc-900 placeholder:text-zinc-400 focus:bg-white focus:border-black focus:ring-1 focus:ring-black outline-none transition text-sm resize-none" 
               />
             </div>
 
@@ -214,7 +211,7 @@ export default function Contact() {
             <button 
               type="submit"
               disabled={status === 'loading'}
-              className="w-full mt-2 bg-zinc-950 text-white font-semibold py-3 rounded-xl hover:bg-zinc-800 active:scale-[0.99] transition shadow-md cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+              className="w-full mt-2 bg-zinc-950 text-white font-semibold py-3 rounded-xl hover:bg-zinc-800 active:scale-[0.99] transition shadow-md cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 focus:outline-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black focus-visible:ring-offset-2"
             >
               {status === 'loading' ? (
                 <>

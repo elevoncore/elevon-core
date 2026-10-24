@@ -23,10 +23,7 @@ export default function Team() {
               className="w-full h-full object-cover scale-105"
             />
           </div>
-          <h3 className="font-display text-xl font-bold mb-1 text-zinc-900">Mudassar</h3>
-          <p className="text-xs text-indigo-600 mb-4 font-semibold uppercase tracking-wider">
-            Software Engineer | Web Dev &amp; Automation
-          </p>
+          <h3 className="font-display text-xl font-bold mb-3 text-zinc-900">Mudassar</h3>
           <p className="text-zinc-600 text-sm leading-relaxed flex-grow">
             Specializing in modern web architectures and streamlined operational systems. Builds dynamic, high-performance applications using React, Next.js, and Tailwind CSS, while engineering powerful, time-saving automation workflows.
           </p>
@@ -66,10 +63,7 @@ export default function Team() {
           <div className="w-20 h-20 rounded-full bg-purple-100 border-2 border-purple-200 text-purple-700 text-2xl font-bold flex items-center justify-center mb-4 shadow-md font-display">
             K
           </div>
-          <h3 className="font-display text-xl font-bold mb-1 text-zinc-900">Kashan</h3>
-          <p className="text-xs text-indigo-600 mb-4 font-semibold uppercase tracking-wider">
-            Software Engineer | ML &amp; Web Dev
-          </p>
+          <h3 className="font-display text-xl font-bold mb-3 text-zinc-900">Kashan</h3>
           <p className="text-zinc-600 text-sm leading-relaxed flex-grow">
             Bridging the gap between intelligent algorithms and responsive user interfaces. Focused on training and integrating machine learning models into robust web applications to deliver smart, data-driven digital experiences.
           </p>
@@ -109,10 +103,7 @@ export default function Team() {
           <div className="w-20 h-20 rounded-full bg-sky-100 border-2 border-sky-200 text-sky-700 text-2xl font-bold flex items-center justify-center mb-4 shadow-md font-display">
             A
           </div>
-          <h3 className="font-display text-xl font-bold mb-1 text-zinc-900">Abdullah</h3>
-          <p className="text-xs text-indigo-600 mb-4 font-semibold uppercase tracking-wider">
-            Software Engineer | Sr. Full Stack Dev
-          </p>
+          <h3 className="font-display text-xl font-bold mb-3 text-zinc-900">Abdullah</h3>
           <p className="text-zinc-600 text-sm leading-relaxed flex-grow">
             Architecting end-to-end solutions with a focus on scalable and secure systems. Drives the full development lifecycle to ensure flawless integration between complex backend infrastructure and seamless frontend design.
           </p>

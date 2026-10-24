@@ -5,8 +5,8 @@ import { useRouter, usePathname } from 'next/navigation';
 
 const NAV_ITEMS = [
   { label: 'Home', id: 'home' },
+  { label: 'About Us', id: 'about' },
   { label: 'Team', id: 'team' },
-  { label: 'Company', id: 'company' },
   { label: 'Projects', id: 'projects' },
 ];
 
@@ -33,7 +33,7 @@ export default function Navbar() {
 
   // Scrollspy observer for active section
   useEffect(() => {
-    const sections = ['home', 'team', 'company', 'projects', 'contact'];
+    const sections = ['home', 'about', 'team', 'projects', 'contact'];
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
